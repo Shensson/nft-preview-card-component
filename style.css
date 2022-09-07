@@ -1,0 +1,214 @@
+body{
+    max-width: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    margin-top: 100px;
+    background-color: hsl(217, 54%, 11%);
+    flex-wrap: wrap;
+}
+.card{
+    background: hsl(216, 50%, 16%);
+    width: fit-content;
+    height: auto;
+    border-radius: 20px;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.image img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.title-nr h3{
+    color: white;
+    justify-content: start;
+}
+.description{
+    color: hsl(215, 51%, 70%);
+}
+.container{
+    display: grid;
+    grid-template-columns: 50%, 50%;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.price{
+    display: flex;
+    justify-content: flex-start;
+    grid-column: 1;
+    color: cyan;
+    gap: 5px;
+}
+.time-left{
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    color: hsl(215, 51%, 70%);
+}
+.author{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    padding-top: 10px;
+    height: 30px;
+    color: white;
+}
+
+.author img {
+    width: 30px;
+    margin-right: 5px;
+    border: 2px solid white;
+    border-radius: 50%;
+    object-fit: contain;
+}
+.author h4{
+    color: hsl(215, 51%, 70%);
+}
+
+.eye{
+    max-width: 50px;
+    opacity: 100% !important;
+    z-index: 2;
+}
+
+.view{
+    position: fixed;
+    top: 120px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: cyan;
+    opacity: 0;
+    z-index: 1;
+}
+
+@media (min-width: 376px){
+    body{
+        max-width: 1440px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        margin-top: 100px;
+        background-color: hsl(217, 54%, 11%);
+        flex-wrap: wrap;
+    }
+    .card{
+        flex-wrap: wrap;
+        background: hsl(216, 50%, 16%);
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+        font-family: 'Outfit', sans-serif;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .image img{
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+    .title-nr h3{
+        color: white;
+        justify-content: start;
+    }
+    .title-nr h3:hover{
+        cursor: pointer;
+        color: cyan;
+        justify-content: start;
+    }
+    .description{
+        color: hsl(215, 51%, 70%);
+        font-size: 18px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 50%, 50%;
+        border-bottom: 1px solid hsl(215, 32%, 27%);
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .price{
+        display: flex;
+        justify-content: flex-start;
+        grid-column: 1;
+        color: cyan;
+        gap: 5px;
+    }
+    .time-left{
+        grid-column: 2;
+        display: flex;
+        justify-content: flex-end;
+        color: hsl(215, 51%, 70%);
+    }
+    .author{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        padding-top: 20px;
+        height: 30px;
+        color: white;
+    }
+    
+    .author img {
+        width: 30px;
+        margin-right: 5px;
+        border: 2px solid white;
+        border-radius: 50%;
+        object-fit: contain;
+    }
+    .author h4{
+        color: hsl(215, 51%, 70%);
+    }
+    .author p:hover{
+        cursor: pointer;
+        color: cyan;
+    }
+    .eye{
+        max-width: 50px;
+        opacity: 100% !important;
+        z-index: 2;
+    }
+
+    .view{
+        position: fixed;
+        top: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        background-color: cyan;
+        opacity: 0;;
+        z-index: 1;
+    }
+    
+    .image:hover .view{
+        cursor: pointer;
+        position: fixed;
+        top: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        background-color: hsla(178, 100%, 50%, 0.316);
+        opacity: 1;
+        z-index: 10;
+    }
+
+}
+
